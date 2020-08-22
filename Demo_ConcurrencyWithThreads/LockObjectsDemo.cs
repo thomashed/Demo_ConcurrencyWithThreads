@@ -33,9 +33,8 @@ namespace Demo_ConcurrencyWithThreads
                 Console.WriteLine("Thread {0}, IsAlive {1}", threads[i].Name, threads[i].IsAlive);
             }
 
-            Console.WriteLine($"Current Priority: {Thread.CurrentThread.Priority}");
+            Console.WriteLine($"Thread {Thread.CurrentThread.Name}, Priority: {Thread.CurrentThread.Priority}");
             Console.WriteLine($"Thread {Thread.CurrentThread.Name} Ending");
-
         }
 
         private class BankAccount
