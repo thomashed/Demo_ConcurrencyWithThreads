@@ -11,37 +11,17 @@ namespace Demo_ConcurrencyWithThreads
             Console.WriteLine("Press Enter to start threading...");
             Console.ReadLine();
 
-            // initialize new thread
-            Thread t = new Thread(PrintOne);
+            // init demo instances
+            var startThreadDemo = new StartThreadDemo();
 
-            Console.WriteLine("Before thread start...");
-            // start executing thread t
-            t.Start();
-            Console.WriteLine("After thread start...");
-            PrintZero();
+
+            startThreadDemo.StartThreadOne();
+            startThreadDemo.StartThreadTwo();
 
             Console.ReadLine();
         }
          
-        public static void PrintOne()
-        {
-            for (int i = 0; i < 1000; i++)
-            {
-                Console.Write(1);
-            }
-            Console.WriteLine();
-            Console.WriteLine("PrintOne done");
-        }
-
-        public static void PrintZero()
-        {
-            for (int i = 0; i < 1000; i++)
-            {
-                Console.Write(0);
-            }
-            Console.WriteLine();
-            Console.WriteLine("PrintZero done");
-        }
+        
 
     }
 }
