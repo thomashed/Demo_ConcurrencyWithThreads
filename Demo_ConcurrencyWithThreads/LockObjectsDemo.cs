@@ -61,7 +61,7 @@ namespace Demo_ConcurrencyWithThreads
                     if ((Balance >= amount))
                     {
                         Balance -= amount;
-                        Console.WriteLine("Removed {amount}, balance is now {Balance}", amount, Balance);
+                        Console.WriteLine("Removed {0}, balance is now {1}", amount, Balance);
                     }
                     return Balance;
                 }
